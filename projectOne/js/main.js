@@ -7,6 +7,16 @@ var closeButton = document.querySelector('#closeButton');
 arrowLeft.addEventListener('hover', function() {
   // console.log('mousedown on button');
   img1.style.opacity = "0.2";
+  img1.style.transform = "rotate(5deg)";
+
+
+});
+
+arrowLeft.addEventListener('click', function() {
+  // console.log('mousedown on button');
+  img1.style.opacity = "0.5";
+  img1.style.transform = "rotate(-5deg)";
+
 
 
 
