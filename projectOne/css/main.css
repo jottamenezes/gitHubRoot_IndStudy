@@ -29,20 +29,17 @@ section {
   top: 150px;
   right: 50%;
   transform: translate(50%, 0);
-    /* right: 5%;
-  left: 5%; */
-    /* top: 0; right: 25%; bottom: 0; left: 25%;
-Why Percentage doesnt work?
-   */
+
 }
 
 #img1 {
   opacity: 1;
+  transform-origin: bottom left;
+   transition: all 200ms ease-in-out;
 }
 
 #img1:hover {
-transform-origin: bottom left;
- transition: all 0.5s ease-in-out;
+
 
 
 }
