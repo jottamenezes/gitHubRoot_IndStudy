@@ -18,16 +18,16 @@ function getWindowWidth() {
 arrowLeft.addEventListener('mouseover', function() {
   // console.log('mousedown on button');
   img1.style.opacity = "0.2";
-  img1.style.transform = "rotate(-5deg)";
+  img1.style.transform = "rotate(-5deg)", "scale(0.5)";
+
 
 
 });
 
-arrowLeft.addEventListener('click', function() {
+arrowLeft.addEventListener('mouseout', function() {
   // console.log('mousedown on button');
-  img1.style.opacity = "0.5";
-
-  img1.style.transform = "rotate(-5deg)", "translateX(200px)";
+  img1.style.opacity = "1";
+  img1.style.transform = "rotate(0deg)";
 
 
 
