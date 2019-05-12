@@ -1,11 +1,10 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
 
 html, body {
-  margin: 0;
-  padding: 0;
   height: 100%;
 }
 
@@ -46,7 +45,7 @@ ul {
   color: white;
 }
 
-#main-section {
+main {
   position: absolute;
   background-color: #629bf0;
   width: 100vw;
@@ -54,11 +53,11 @@ ul {
 }
 
 .principlesBG {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  flex-direction: column;
+  flex-direction: column; */
   position: absolute;
-  align-items: center;
+  /* align-items: center; */
   text-align: center;
   background-color: #2e2047;
   top: 1%;
@@ -88,10 +87,9 @@ ul {
 }
 
 .principle-artboard {
-  margin: 0;
   position: relative;
-  /* background-color: blue;
-  opacity:.2; */
+  background-color: red;
+  /* opacity:.2; */
   width: 25vw;
   height: 25vw;
   top: 50%;
@@ -108,88 +106,69 @@ ul {
   transform-origin: center;
   top: 50%;
   left: 50%;
-  transform:  translateX(-50%) translateY(30%) scale(.6) rotate(-180deg);
+  transform: translateX(-50%) translateY(30%) scale(.6) rotate(-180deg);
   transition-property: background, transform, border-radius, box-shadow;
   transition-duration: 500ms, 300ms, 300ms, 500ms;
   transition-timing-function: ease-in-out;
-    transition-delay: 50ms;
-
-
-    border-radius: 0%;
-box-shadow: 0px -13px 10px -2px rgba(0, 0, 28, .3);
-
+  /* transition-delay: 50ms; */
+  border-radius: 0%;
+  box-shadow: 0px -13px 10px -2px rgba(0, 0, 28, .3);
   /* Transform properties */
-
   /* properties values */
-
 }
 
 #principle-1:hover {
-
-
   transform: translateX(-50%) translateY(-80%) scale(1.2) rotate(0deg);
-
-    transition-property: background, transform, border-radius, box-shadow;
-    transition-duration: 500ms, 300ms, 300ms, 500ms;
-    transition-timing-function: ease-in-out;
-      transition-delay: 150ms;
-
+  transition-property: background, transform, border-radius, box-shadow;
+  transition-duration: 500ms, 300ms, 300ms, 500ms;
+  transition-timing-function: ease-in-out;
+  transition-delay: 150ms;
   cursor: pointer;
   border-radius: 50%;
   box-shadow: 0px 0px 20px 10px rgba(255, 255, 28, .2);
-    box-shadow: 0px 0px 30px 5px rgba(97, 180, 205, .6);
-
-    animation-name: squashAndStretch, bounce;
-    animation-delay: .5s, 6.5s;
-    animation-duration: 6s, 4s;
+  box-shadow: 0px 0px 30px 5px rgba(97, 180, 205, .6);
+  /* animation-name: squashAndStretch, bounce;
+  animation-delay: .5s, 6.5s;
+  animation-duration: 6s, 4s; */
 }
-
+/*
 @keyframes squashAndStretch {
-
-      from {
-
-
-    transform:  translateX(-50%) translateY(-80%) scale(1.2) rotate(0) ;
-      }
-      25%,
-      50% {
-
-          transform:  translateX(-50%) translateY(-60%) scale(1.2) rotate(-45deg) ;
-      }
-      50%, 100%{
-      transform:  translateX(-50%) translateY(-100%) scale(1) rotate(180deg);
-      }
-      to {
-
-    transform:  translateX(-50%) translateY(-80%) scale(1.2) rotate(0) ;
-
-      }
+  from {
+    transform: translateX(-50%) translateY(-80%) scale(.5) rotate(0);
   }
 
+  25%,
+  50% {
+    transform: translateX(-50%) translateY(-60%) scale(1.2) rotate(-45deg);
+  }
 
-  /* @keyframes bounce {
+  50%, 100% {
+    transform: translateX(-50%) translateY(-100%) scale(1);
+  }
 
-        from {
+  to {
+    transform: translateX(-50%) translateY(-80%) scale(.8);
+  }
+}
 
+@keyframes bounce {
+  from {
+    transform: translateX(-50%) translateY(30%) scale(1.2);
+  }
 
-      transform:  translateX(-50%) translateY(30%) scale(1.2) ;
-        }
-        25%,
-        50% {
+  25%,
+  50% {
+    transform: translateX(-50%) translateY(0%) scale(1.2);
+  }
 
-            transform:  translateX(-50%) translateY(0%) scale(1.2) ;
-        }
-        50%, 100%{
-        transform:  translateX(-50%) translateY(20%) scale(1.2) ;
-        }
-        to {
+  50%, 100% {
+    transform: translateX(-50%) translateY(20%) scale(1.2);
+  }
 
-      transform:  translateX(-50%) translateY(30%) scale(1.2) ;
-
-        }
-    } */
-
-
+  to {
+    transform: translateX(-50%) translateY(30%) scale(1.2);
+  }
+} */
 
 h1 {
   /* padding: 2rem; */
@@ -200,7 +179,7 @@ h1 {
   color: #9cbff2;
   font-family: 'Amatic SC', cursive;
 }
-
+/*
 .images {
   position: absolute;
   width: 80%;
@@ -213,4 +192,4 @@ h1 {
   opacity: 1;
   transform-origin: bottom left;
   transition: all 200ms ease-in-out;
-}
+} */
