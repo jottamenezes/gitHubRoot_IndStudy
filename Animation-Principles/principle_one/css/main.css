@@ -16,14 +16,15 @@ body {
   overflow: hidden;
 }
 
+/* HEADER related changes, not needed for this phase
 header {
   position: absolute;
   right: 0;
   top: 0;
   width: 100vw;
   z-index: 99;
-}
-
+} */
+/*
 #logo {
   background-color: #d8e1e9;
   position: relative;
@@ -43,13 +44,21 @@ header {
 ul {
   font-size: 2rem;
   color: white;
-}
-
+} */
 main {
   position: absolute;
   background-color: #629bf0;
   width: 100vw;
   height: 100vh;
+}
+
+h1 {
+  font-size: 4em;
+  width: 100%;
+  position: absolute;
+  bottom: 0vh;
+  color: #9cbff2;
+  font-family: 'Amatic SC', cursive;
 }
 
 .principlesBG {
@@ -67,15 +76,6 @@ main {
   height: 98%;
 }
 
-.principle-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  align-items: center;
-  top: 0;
-  right: 0;
-}
-
 #principle-ground {
   position: absolute;
   background-color: #241130;
@@ -86,39 +86,32 @@ main {
   right: 0;
 }
 
-.principle-artboard {
-  position: relative;
-  background-color: red;
-  /* opacity:.2; */
-  width: 25vw;
-  height: 25vw;
-  top: 50%;
-  left: 50%;
-  transform: translateY(-40%) translateX(-50%)
-}
-
 #principle-1 {
   background: linear-gradient(50deg, rgba(97, 180, 205, 1) -60%, rgba(38, 55, 138, 1) 30%, rgba(255, 255, 28, 1) 100%);
   position: absolute;
-  width: 40%;
-  height: 40%;
+  width: 15em;
+  height: 15em;
   /* Centering div */
-  transform-origin: center;
+  transform-origin: bottom;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%) translateY(30%) scale(.6) rotate(-180deg);
-  transition-property: background, transform, border-radius, box-shadow;
-  transition-duration: 500ms, 300ms, 300ms, 500ms;
-  transition-timing-function: ease-in-out;
-  /* transition-delay: 50ms; */
-  border-radius: 0%;
-  box-shadow: 0px -13px 10px -2px rgba(0, 0, 28, .3);
-  /* Transform properties */
-  /* properties values */
+  transform: translateX(-50%) translateY(-150%);
+
+  border-radius: 50%;
+  box-shadow: 0px 13px 10px -2px rgba(0, 0, 28, .3);
+  /*TRIGGER ANIMATION ON LOAD */
+
+  animation-name: squashAndStretch;
+
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  /* OR */
+  /* animation: squashAndStretch, 5s, infinite; */
+
 }
 
 #principle-1:hover {
-  transform: translateX(-50%) translateY(-80%) scale(1.2) rotate(0deg);
+  transform: translateX(-50%) translateY(-150%) scale(1.2) rotate(0deg);
   transition-property: background, transform, border-radius, box-shadow;
   transition-duration: 500ms, 300ms, 300ms, 500ms;
   transition-timing-function: ease-in-out;
@@ -131,29 +124,59 @@ main {
   animation-delay: .5s, 6.5s;
   animation-duration: 6s, 4s; */
 }
-/*
+
 @keyframes squashAndStretch {
   from {
-    transform: translateX(-50%) translateY(-80%) scale(.5) rotate(0);
+    animation-timing-function: ease-in-out;
+    transform: translateX(-50%) translateY(-150%) scaleX(1) scaleY(1);
+
+
   }
 
-  25%,
-  50% {
-    transform: translateX(-50%) translateY(-60%) scale(1.2) rotate(-45deg);
+  10%,
+  20% {
+    transform: translateX(-50%)  scaleX(0.8) scaleY(1.2);
   }
 
-  50%, 100% {
-    transform: translateX(-50%) translateY(-100%) scale(1);
+
+
+
+  20%,
+  29% {
+    transform: translateX(-50%) translateY(50%) scaleX(1.5) scaleY(.5);
   }
+  29%,
+  31% {
+    transform: translateX(-50%) translateY(50%)  scaleX(1.7) scaleY(.3);
+  }
+
+  31%,
+  33% {
+    transform: translateX(-50%) translateY(50%)  scaleX(1.7) scaleY(.3);
+  }
+  33%,
+  35% {
+    transform: translateX(-50%) translateY(50%)  scaleX(1.3) scaleY(.7);
+  }
+
+  35%,
+  36% {
+    transform: translateX(-50%) translateY(50%)  scaleX(0.5) scaleY(1.5);
+  }
+
+
+
 
   to {
-    transform: translateX(-50%) translateY(-80%) scale(.8);
+        animation-timing-function: ease-in-out;
+    transform: translateX(-50%) translateY(-150%) scaleX(1) scaleY(1);
+
   }
 }
 
-@keyframes bounce {
+/* @keyframes bounce {
   from {
-    transform: translateX(-50%) translateY(30%) scale(1.2);
+    transform: translateX(-50%) translateY(-200%) scaleX(1) scaleY(1);
   }
 
   25%,
@@ -168,28 +191,4 @@ main {
   to {
     transform: translateX(-50%) translateY(30%) scale(1.2);
   }
-} */
-
-h1 {
-  /* padding: 2rem; */
-  font-size: 4em;
-  width: 100%;
-  position: absolute;
-  bottom: 0vh;
-  color: #9cbff2;
-  font-family: 'Amatic SC', cursive;
-}
-/*
-.images {
-  position: absolute;
-  width: 80%;
-  top: 20em;
-  right: 50%;
-  transform: translate(50%, 0);
-}
-
-#img1 {
-  opacity: 1;
-  transform-origin: bottom left;
-  transition: all 200ms ease-in-out;
 } */
