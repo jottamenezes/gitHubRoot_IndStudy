@@ -91,17 +91,13 @@ h1 {
   position: absolute;
   width: 15em;
   height: 15em;
-  /* trying triangle */
-  /* border-color: transparent transparent #e7be0f transparent;
-	border-style: solid;
-	border-width: 0px 10em 15em 10em; */
-  /* Centering div */
+
   transform-origin: center;
   top: 50%;
   left: 50%;
   transform: translateX(-200%) translateY(0%);
   border-radius: 0%;
-  /* box-shadow: 0px 13px 10px -2px rgba(0, 0, 28, .3); */
+
   /*TRIGGER ANIMATION ON LOAD */
   animation-name: poseToPose;
   animation-delay: .5s;
@@ -111,16 +107,30 @@ h1 {
   /* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name; */
 }
 
-/* TRIED MASKING THE OVERLAY TO THE SHAPE BUT IT DIDNT WORK
+/* TRIED MASKING THE OVERLAY TO THE SHAPE BUT IT DIDNT WORK */
  #principle-overlay {
-  background: linear-gradient(50deg, rgba(97, 180, 205, 1) -60%, rgba(38, 55, 138, 1) 30%, rgba(255, 255, 28, 1) 100%);
-    background-blend-mode: overlay;
-  position: absolute;
-  width: 15em;
-  height: 15em;
+   background: linear-gradient(45deg, rgba(228, 108, 22, 0) 20%, #241130 52%, rgba(74, 215, 61, 1) 100%);
+   position: absolute;
+   width: 15em;
+   height: 15em;
+   border: 3em;
+   border-color: black;
+   border-width: thick;
+
+
+   transform-origin: center;
+   top: 50%;
+   left: 50%;
+   transform: translateX(-200%) translateY(0%);
   display: none;
 
-} */
+   /*TRIGGER ANIMATION ON LOAD */
+   /* animation-name: poseToPoseOverlay;
+   animation-delay: .5s;
+   animation-duration: 5s;
+   animation-iteration-count: infinite; */
+
+}
 #principle-1:hover {
   /* transform: translateX(-50%) translateY(-150%) scale(1.2) rotate(0deg);
   transition-property: background, transform, border-radius, box-shadow;
@@ -181,6 +191,54 @@ h1 {
 
   }
 }
+
+/* ATTEMPTED CREATING OVERLAY EFFECT */
+
+@keyframes poseToPoseOverlay {
+  from {
+    animation-timing-function: ease-out;
+    transform: translate(-200%, 0%);
+      border-radius: 0%;
+
+
+  }
+  0%, 15% {
+    transform: translate(-200%, 0%);
+      border-radius: 0%;
+  }
+
+  35%,
+  50% {
+    transform: translate(-50%, 0%) rotate(-45deg) ;
+    border-radius: 0%;
+    background: linear-gradient(45deg, rgba(228, 108, 22, 0) 20%, #241130 52%, rgba(74, 215, 61, 1) 100%);
+
+  }
+
+  50%, 80% {
+    transform: translate(100%, 0%) rotate(-90deg);
+      border-radius: 50%;
+
+  }
+
+  80%, 85% {
+    transform: translate(100%, 0%) rotate(-90deg) ;
+  border-radius: 50%;
+
+  }
+
+
+
+  to {
+    animation-timing-function: ease-in;
+    transform: translate(-200%, 0%);
+    border-radius: 0%;
+
+
+  }
+}
+
+
 
 /* CREATING TRIANGLE USING BORDER_RADIUS */
 /* @keyframes poseToPose {
