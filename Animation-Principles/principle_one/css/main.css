@@ -136,6 +136,9 @@ h1 {
   10%,
   20% {
     transform: translateX(-50%)  scaleX(0.8) scaleY(1.2);
+    box-shadow: 0px 150px 200px -50px rgba(0, 45, 205, .6);
+
+
   }
 
 
@@ -143,11 +146,13 @@ h1 {
 
   20%,
   29% {
+
     transform: translateX(-50%) translateY(50%) scaleX(1.5) scaleY(.5);
   }
   29%,
   31% {
     transform: translateX(-50%) translateY(50%)  scaleX(1.7) scaleY(.3);
+
   }
 
   31%,
@@ -168,8 +173,12 @@ h1 {
 
 
   to {
+
         animation-timing-function: ease-in-out;
     transform: translateX(-50%) translateY(-150%) scaleX(1) scaleY(1);
+    box-shadow: 0px 0px 70px -5px rgba(0, 45, 205, .7);
+    
+
 
   }
 }
