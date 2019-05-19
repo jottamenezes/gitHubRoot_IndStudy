@@ -91,45 +91,53 @@ h1 {
   position: absolute;
   width: 15em;
   height: 15em;
-
   transform-origin: center;
   top: 50%;
   left: 50%;
   transform: translateX(-200%) translateY(0%);
   border-radius: 0%;
-
   /*TRIGGER ANIMATION ON LOAD */
   animation-name: poseToPose;
   animation-delay: .5s;
-  animation-duration: 5s;
+  animation-duration: 4.5s;
   animation-iteration-count: infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   /* OR Follow schema */
   /* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name; */
 }
+@keyframes poseToPose {
+  from {
+    animation-timing-function: ease-out;
+    transform: translate(-200%, 0%);
+    border-radius: 0%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
 
-/* TRIED MASKING THE OVERLAY TO THE SHAPE BUT IT DIDNT WORK */
- #principle-overlay {
-   background: linear-gradient(45deg, rgba(228, 108, 22, 0) 20%, #241130 52%, rgba(74, 215, 61, 1) 100%);
-   position: absolute;
-   width: 15em;
-   height: 15em;
-   border: 3em;
-   border-color: black;
-   border-width: thick;
+  20%, 30% {
+    transform: translate(-50%, 0%) rotate(-180deg);
+  }
+
+  20%,
+  45% {
+    transform: translate(-50%, 0%) rotate(-180deg);
+    border-radius: 0%;
+    clip-path: polygon(50% 0%, 50% 0%, 100% 80%, 0% 80%);
+  }
+
+  65%, 75% {
+    transform: translate(100%, 0%) rotate(90deg);
+    border-radius: 50%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  to {
+    animation-timing-function: ease-out;
+    transform: translate(-200%, 0%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
 
-   transform-origin: center;
-   top: 50%;
-   left: 50%;
-   transform: translateX(-200%) translateY(0%);
-  display: none;
 
-   /*TRIGGER ANIMATION ON LOAD */
-   /* animation-name: poseToPoseOverlay;
-   animation-delay: .5s;
-   animation-duration: 5s;
-   animation-iteration-count: infinite; */
-
+  }
 }
 #principle-1:hover {
   /* transform: translateX(-50%) translateY(-150%) scale(1.2) rotate(0deg);
@@ -147,96 +155,16 @@ h1 {
   animation-duration: 6s, 4s; */
 }
 
-@keyframes poseToPose {
-  from {
-    animation-timing-function: ease-out;
-    transform: translate(-200%, 0%);
-      border-radius: 0%;
-
-
-  }
-  0%, 15% {
-    transform: translate(-200%, 0%);
-      border-radius: 0%;
-  }
-
-  35%,
-  50% {
-    transform: translate(-50%, 0%) rotate(-45deg) ;
-    border-radius: 0%;
-    background: linear-gradient(45deg, rgba(228, 108, 22, 0) 50%, rgba(38, 55, 138, 1) 52%, rgba(255, 255, 28, 1) 100%);
-
-  }
-
-  50%, 80% {
-    transform: translate(100%, 0%) rotate(-90deg);
-      border-radius: 50%;
-      background: linear-gradient(50deg, rgba(97, 180, 205, 1) -60%, rgba(38, 55, 138, 1) 30%, rgba(255, 255, 28, 1) 100%);
-
-  }
-
-  80%, 85% {
-    transform: translate(100%, 0%) rotate(-90deg) ;
-  border-radius: 50%;
-
-  }
+/* TRIED MASKING THE OVERLAY TO THE SHAPE BUT IT DIDNT WORK */
 
 
 
-  to {
-    animation-timing-function: ease-in;
-    transform: translate(-200%, 0%);
-    border-radius: 0%;
 
 
-  }
-}
 
 /* ATTEMPTED CREATING OVERLAY EFFECT */
 
-@keyframes poseToPoseOverlay {
-  from {
-    animation-timing-function: ease-out;
-    transform: translate(-200%, 0%);
-      border-radius: 0%;
 
-
-  }
-  0%, 15% {
-    transform: translate(-200%, 0%);
-      border-radius: 0%;
-  }
-
-  35%,
-  50% {
-    transform: translate(-50%, 0%) rotate(-45deg) ;
-    border-radius: 0%;
-    background: linear-gradient(45deg, rgba(228, 108, 22, 0) 20%, #241130 52%, rgba(74, 215, 61, 1) 100%);
-
-  }
-
-  50%, 80% {
-    transform: translate(100%, 0%) rotate(-90deg);
-      border-radius: 50%;
-
-  }
-
-  80%, 85% {
-    transform: translate(100%, 0%) rotate(-90deg) ;
-  border-radius: 50%;
-
-  }
-
-
-
-  to {
-    animation-timing-function: ease-in;
-    transform: translate(-200%, 0%);
-    border-radius: 0%;
-
-
-  }
-}
 
 
 
