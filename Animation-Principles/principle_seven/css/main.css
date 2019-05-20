@@ -94,7 +94,7 @@ h1 {
 
 
 fill:none;
-/* stroke: #fff; */
+stroke: #fff;
 stroke-width: 5;
 stroke-linecap: round;
 stroke-linejoin: round;
