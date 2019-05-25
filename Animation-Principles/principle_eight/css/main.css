@@ -47,7 +47,7 @@ ul {
 } */
 main {
   position: absolute;
-  background-color: #48d9c7;
+  background-color: #b09258;
   width: 100vw;
   height: 100vh;
 }
@@ -174,7 +174,7 @@ h1 {
   left: 50%;
   transform: translateX(26em) translateY(11.5em);
   animation-name: overlap;
-  animation-delay: .4s;
+  animation-delay: .45s;
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
@@ -182,30 +182,33 @@ h1 {
 @keyframes overlap {
   from {
     animation-timing-function: ease-in;
-    transform: translateX(50em) translateY(20em) rotate(0deg);
+    transform: translateX(50em) translateY(25em) rotate(0deg);
   }
 
   10%, 40% {
-    transform: translateX(26em) translateY(11.5em) rotate(0deg) skewX(-10deg);
+    transform: translateX(25em) translateY(11em) rotate(0deg) skewX(-10deg);
   }
 
   40%, 45% {
-    transform: translateX(27.5em) translateY(11.5em) rotate(48deg) skewX(0deg);
+    transform: translateX(27.5em) translateY(11em) rotate(48deg) skewX(0deg);
   }
 
   45%, 48% {
-    transform: translateX(27.5em) translateY(11.5em) rotate(43deg) skewX(0deg);
+    transform: translateX(27.5em) translateY(11em) rotate(43deg) skewX(0deg);
   }
 
   48%, 65% {
-    transform: translateX(27.5em) translateY(11.5em) rotate(90deg);
+    transform: translateX(27.5em) translateY(11em) rotate(90deg);
   }
 
+95%{
+  transform: translateX(27.5em) translateY(11em) rotate(90deg);
 
+}
 
   to {
     animation-timing-function: ease-out;
-    transform: translate(27.5em, 11.5em) rotate(90deg);
+    transform: translate(27.5em, 11em) rotate(90deg);
   }
 }
 
