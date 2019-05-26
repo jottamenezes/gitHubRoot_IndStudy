@@ -50,6 +50,7 @@ main {
   background-color: #629bf0;
   width: 100vw;
   height: 100vh;
+
 }
 
 h1 {
@@ -62,6 +63,7 @@ h1 {
 }
 
 .principlesBG {
+
   /* display: flex;
   flex-wrap: wrap;
   flex-direction: column; */
@@ -86,6 +88,7 @@ h1 {
   right: 0;
 }
 
+
 .svgPath {
   position: absolute;
   top: 50%;
@@ -104,7 +107,7 @@ z-index: 0;
 
 #principle-1 {
   background: linear-gradient(50deg, rgba(97, 180, 205, 1) -60%, rgba(38, 55, 138, 1) 30%, rgba(255, 255, 28, 1) 100%);
-  position: absolute;
+  position: relative;
   width: 7em;
   height: 7em;
   /* Centering div */
@@ -156,26 +159,26 @@ offset-distance: 0%;
     }
 
     22%{
-      transform:  scaleX(1) scaleY(1);
+      transform:  scaleX(1) scaleY(1) rotate(45deg);
       box-shadow: 0px 0px 70px -5px rgba(0, 45, 205, .7);
 
 
     }
 
 45% {
-    transform:  scaleX(1.4) scaleY(0.9);
+      transform:  scaleX(1) scaleY(1) rotate(90deg);
     offset-distance: 59%;
 }
 
-50%, 53% {
-  transform:  scaleX(0.5) scaleY(1.5) ;
+50%, 52% {
+  transform:  scaleX(0.5) scaleY(1.5)rotate(180deg) ;
   box-shadow: 0px 13px 10px -2px rgba(0, 0, 28, .3);
 
 
 
 }
-58% {
-  transform:  scaleX(1.3) scaleY(0.9);
+56% {
+  transform:  scaleX(1.3) scaleY(0.9) rotate(360deg) ;
 
 }
 
@@ -183,20 +186,21 @@ offset-distance: 0%;
 
 75% {
 
-  transform:  scaleX(1) scaleY(1);
+  transform:  scaleX(1) scaleY(1) rotate(405deg) ;
+;
   box-shadow: 0px 0px 70px -5px rgba(0, 45, 205, .7);
 
 }
 
 90% {
-  transform:  scaleX(1.3) scaleY(0.9);
+  transform:  scaleX(1.3) scaleY(0.9)  rotate(450deg) ;
 
 }
 
 
 
   to {
-    transform:  scaleX(0.5) scaleY(1.5);
+    transform:  scaleX(0.5) scaleY(1.5)  rotate(495deg) ;
     box-shadow: 0px 13px 10px -2px rgba(0, 0, 28, .3);
 
       offset-distance: 100%;

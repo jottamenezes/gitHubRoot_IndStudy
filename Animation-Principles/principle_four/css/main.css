@@ -90,12 +90,12 @@ h1 {
 #principle-1 {
   background: linear-gradient(50deg, rgba(97, 180, 205, 1) -60%, rgba(38, 55, 138, 1) 30%, rgba(255, 255, 28, 1) 100%);
   position: absolute;
-  width: 15em;
-  height: 15em;
+  width: 13em;
+  height: 13em;
   transform-origin: center;
   top: 50%;
   left: 50%;
-  transform: translateX(-200%) translateY(0%);
+  transform: translateX(-200%) translateY(-20%);
   border-radius: 0%;
   /*TRIGGER ANIMATION ON LOAD */
   animation-name: poseToPose;
@@ -109,31 +109,31 @@ h1 {
 @keyframes poseToPose {
   from {
     animation-timing-function: ease-out;
-    transform: translate(-200%, 0%);
+    transform: translate(-200%, -20%);
     border-radius: 0%;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
   20%, 30% {
-    transform: translate(-50%, 0%) rotate(-180deg);
+    transform: translate(-50%, -20%) rotate(-180deg);
   }
 
   20%,
   45% {
-    transform: translate(-50%, 0%) rotate(-180deg);
+    transform: translate(-50%, -20%) rotate(-180deg);
     border-radius: 0%;
     clip-path: polygon(50% 0%, 50% 0%, 100% 80%, 0% 80%);
   }
 
   65%, 75% {
-    transform: translate(100%, 0%) rotate(90deg);
+    transform: translate(100%, -20%) rotate(90deg);
     border-radius: 50%;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
 
   to {
     animation-timing-function: ease-out;
-    transform: translate(-200%, 0%);
+    transform: translate(-200%, -20%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
 

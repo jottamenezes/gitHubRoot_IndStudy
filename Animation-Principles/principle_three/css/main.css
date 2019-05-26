@@ -89,8 +89,8 @@ h1 {
 #principle-1 {
   background: linear-gradient(50deg, rgba(97, 180, 205, 1) -60%, rgba(38, 55, 138, 1) 30%, rgba(255, 255, 28, 1) 100%);
   position: absolute;
-  width: 15em;
-  height: 15em;
+  width: 13em;
+  height: 13em;
   /* Centering div */
   transform-origin: center;
   top: 50%;
@@ -101,7 +101,7 @@ h1 {
   /*TRIGGER ANIMATION ON LOAD */
   animation-name: squashAndStretch;
   animation-delay: .5s;
-  animation-duration: 2.5s;
+  animation-duration:3s;
   animation-iteration-count: infinite;
   /* OR Follow schema */
   /* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name; */
