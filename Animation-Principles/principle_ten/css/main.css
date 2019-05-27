@@ -49,7 +49,7 @@ ul {
 
 main {
   position: absolute;
-  background-color: #d9486f;
+  background-color: #d94873;
   width: 100vw;
   height: 100vh;
 }
@@ -91,8 +91,8 @@ h1 {
 #principle-1 {
   background: linear-gradient(50deg, rgba(97, 180, 205, 1) -60%, rgba(38, 55, 138, 1) 30%, rgba(255, 255, 28, 1) 100%);
   position: absolute;
-  width: 15em;
-  height: 15em;
+  width: 13em;
+  height: 13em;
   /* Centering div */
   transform-origin: bottom;
   top: 50%;
@@ -118,10 +118,10 @@ h1 {
   transition-property: background, transform, border-radius, box-shadow;
   transition-duration: 500ms, 300ms, 300ms, 500ms;
   transition-timing-function: ease-in-out;
-  transition-delay: 150ms;
+  transition-delay: 50ms;
   cursor: pointer;
-  border-radius: 50%;
-  box-shadow: 0px 0px 20px 10px rgba(255, 255, 28, .2);
+
+
   box-shadow: 0px 0px 30px 5px rgba(97, 180, 205, .6);
   /* animation-name: squashAndStretch, bounce;
   animation-delay: .5s, 6.5s;
@@ -136,33 +136,11 @@ h1 {
 
   }
 
-  0%,
-  70% {
-        transform: translate(-50%,50%)  scaleX(1) scaleY(1);
 
-  }
+50%{
+  transform: translate(-50%,50%) scaleX(1) scaleY(1);
 
-
-  70%,
-  75% {
-        transform: translate(-50%,50%)  scaleX(1) scaleY(.7);
-box-shadow: 0px 0px 100px -2px rgba(0, 45, 205, .9);
-  }
-
-
-
-
-
-  75%,90%
- {
-    transform: translate(-50%, -150%)  scaleX(1) scaleY(1);
-box-shadow: 0px 0px 100px 10px rgba(0, 45, 205, .9);
-    animation-timing-function: ease-in;
-
-  }
-
-
-
+}
 
 
 
