@@ -87,7 +87,7 @@ h1 {
 }
 
 #svgPath {
-  fill: #DDBF68;
+  /* fill: #DDBF68; */
   position: absolute;
   transform-origin: bottom;
   width: 80em;
@@ -97,6 +97,11 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  animation-name: squareSquash;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+
 
 }
 
@@ -105,18 +110,20 @@ h1 {
   transform: translate(-50%,-50%) scaleX(1) scaleY(1);
   }
 
-  30% {
+  80% {
     transform: translate(-50%, -50%) scaleX(1) scaleY(1);
-
+opacity: 1;
   }
 
   to {
     transform: translate(-50%, -50%) scaleX(1) scaleY(1);
+    opacity: 1;
+    /* fill: #e48a49; */
   }
 }
 
 #principle-1 {
-  background: linear-gradient(50deg, rgba(97, 180, 205, 1) -60%, rgba(38, 55, 138, 1) 30%, rgba(255, 255, 28, 1) 100%);
+  background: linear-gradient(50deg, rgba(255, 255, 28, 1) 10%, rgba(214, 58, 95, 1) 100%);
   position: absolute;
   width: 4em;
   height: 4em;
@@ -124,39 +131,64 @@ h1 {
   transform-origin: bottom;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,200%);
+  transform: translate(-50%,-900%);
   border-radius: 50%;
-  /* box-shadow: 0px 13px 10px -2px rgba(0, 0, 28, .3); */
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, .3);
   /*TRIGGER ANIMATION ON LOAD */
   animation-name: bounceBall;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
+  animation-duration: 4s;
+  animation-delay: 0.52s;
+  animation-iteration-count: 1;
   /* OR */
   /* animation: squashAndStretch, 5s, infinite; */
+}
+
+
+
+@keyframes bounceBall {
+  from {
+    background: linear-gradient(50deg, rgba(255, 255, 28, 1) 10%, rgba(214, 58, 95, 1) 100%);
+
+  transform: translate(-50%,-900%) rotate(0);
+  }
+
+ 12%{
+   transform: translate(-50%,-29%) rotate(0);
+
+ }
+  15% {
+    transform: translate(-50%,-25%) rotate(-25deg);
+
+  }
+
+  45%, 50% {
+    transform: translate(-50%,0%) rotate(25deg);
+
+  }
+
+  65%, 70% {
+    transform: translate(-50%,25%) rotate(-15deg);
+
+  }
+
+  78%{
+    transform: translate(-50%, 45%) rotate(0deg) ;
+    opacity: 1;
+  }
+
+  to {
+
+    transform: translate(-50%, -900%) rotate(0deg);
+opacity: 0;
+  }
 }
 
 #principle-1:hover {
   transform: translateX(-50%) translateY(-150%) scale(1.2) rotate(0deg);
   transition-property: background, transform, border-radius, box-shadow;
   transition-duration: 500ms, 300ms, 300ms, 500ms;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: linear;
   cursor: pointer;
   box-shadow: 0px 0px 30px 5px rgba(97, 180, 205, .6);
 
-}
-
-@keyframes bounceBall {
-  from {
-    animation-timing-function: ease-out;
-  transform: translate(-50%,-400%) scaleX(1) scaleY(1);
-  }
-
-  30% {
-    transform: translate(-50%, 50%) scaleX(1) scaleY(1);
-  }
-
-  to {
-    animation-timing-function: ease-out;
-    transform: translate(-50%, -400%) scaleX(1) scaleY(1);
-  }
 }
