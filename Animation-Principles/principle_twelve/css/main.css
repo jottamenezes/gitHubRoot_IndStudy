@@ -99,28 +99,45 @@ main {
   width: var(--squareSize);
   height: var(--squareSize);
   /* Centering div */
-  transform-origin: center;
+  transform-origin: bottom right;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -120%) rotate(135deg);
+  transform: translate(-500%, -620%) rotate(0);
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, .3);
   /*TRIGGER ANIMATION ON LOAD */
-  /* animation-name: squareOne;
+  animation-timing-function: ease-out;
+  animation-name: squareOne;
   animation-duration: 4s;
-  animation-delay: 0.52s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; */
+  animation-delay: 0.5s;
+  animation-fill-mode: forwards;
+
+  /* animation-iteration-count: infinite; */
+  /* animation-direction: alternate; */
+
 }
 
 @keyframes squareOne {
   from {
     background: linear-gradient(50deg, rgba(255, 255, 28, 1) 10%, rgba(214, 58, 95, 1) 100%);
-    transform: translate(-50%, -500%) rotate(0);
+    transform: translate(-500%, -500%) rotate(0);
+
+    opacity: 0;
   }
 
+  40%{
+    transform: translate(-50%, -120%) rotate(135deg);
+    transform-origin: center;
+    opacity: 0.1;
+  }
+
+  50%{
+    opacity: 0.8;
+
+  }
   to {
-    transform: translate(-50%, -50%) rotate(0deg);
-    opacity: 0;
+    transform: translate(-50%, -120%) rotate(135deg);
+    transform-origin: center;
+    opacity: 1;
   }
 }
 
@@ -133,26 +150,42 @@ main {
   transform-origin: center;
   top: 50%;
   left: 50%;
-  transform: translate(20%, -50%) rotate(225deg);
+  transform: translate(500%, 500%) rotate(0);
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, .3);
   /*TRIGGER ANIMATION ON LOAD */
-  /* animation-name: squareTwo;
-  animation-duration: 4s;
-  animation-delay: 0.52s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; */
+  animation-name: squareTwo;
+  animation-duration: 3.5s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
+
+  /* animation-iteration-count: infinite; */
 }
 
 @keyframes squareTwo {
-  from {
-    background: linear-gradient(50deg, rgba(255, 255, 28, 1) 10%, rgba(214, 58, 95, 1) 100%);
-    transform: translate(-50%, -500%) rotate(0);
-  }
 
-  to {
-    transform: translate(-50%, -50%) rotate(0deg);
-    opacity: 0;
-  }
+    from {
+      background: linear-gradient(50deg, rgba(255, 255, 28, 1) 10%, rgba(214, 58, 95, 1) 100%);
+      transform: translate(500%, 500%) rotate(0);
+
+      opacity: 0;
+    }
+
+    40%{
+      transform: translate(20%, -50%) rotate(225deg);
+      transform-origin: center;
+      opacity: 0.1;
+    }
+
+    50%{
+      opacity: 0.8;
+
+    }
+    to {
+      transform: translate(20%, -50%) rotate(225deg);
+      transform-origin: center;
+      opacity: 1;
+
+    }
 }
 
 #square-3 {
