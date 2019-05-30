@@ -4,7 +4,8 @@
   padding: 0;
   /* VARIABLES */
   --theme-color: #241130;
-  --mainPrinciple-color: linear-gradient(50deg, rgba(42, 177, 153, 1) 10%, rgba(214, 199, 58, 1) 100%);
+  --mainPrinciple-color: linear-gradient(50deg, rgba(97, 180, 205, 1) -60%, rgba(38, 55, 138, 1) 30%, rgba(255, 255, 28, 1) 100%);
+  --delaySmSq: 1.5s;
   --squareSize: 8em;
 }
 
@@ -65,31 +66,40 @@ main {
 #bigSquare {
   background: var(--mainPrinciple-color);
   position: absolute;
-  width: 16em;
-  height: 16em;
+  width: 13em;
+  height: 13em;
   /* Centering div */
   transform-origin: center;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 0%;
+  transform: translate(-50%, -50%) rotate(0) scale(0);
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, .3);
+
+
   /*TRIGGER ANIMATION ON LOAD */
-  /* animation-name: bigSquare;
-  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-name: bigSquare;
+  animation-duration: 2s;
   animation-delay: 0.52s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; */
+  animation-fill-mode: forwards;
+
+
+
 }
 
 @keyframes bigSquare {
   from {
-    background: linear-gradient(50deg, rgba(255, 255, 28, 1) 10%, rgba(214, 58, 95, 1) 100%);
-    transform: translate(-50%, -500%) rotate(0);
+    transform: translate(-50%, -50%) rotate(0) scale(0);
+    opacity: 0;
+    border-radius: 50%;
+
   }
 
   to {
-    transform: translate(-50%, -50%) rotate(0deg);
-    opacity: 0;
+    transform: translate(-50%, -50%) rotate(-1035deg) scale(1);
+    opacity: 1;
+    border-radius: 0%;
   }
 }
 
@@ -98,48 +108,81 @@ main {
   position: absolute;
   width: var(--squareSize);
   height: var(--squareSize);
-  /* Centering div */
+
   transform-origin: bottom right;
   top: 50%;
   left: 50%;
-  transform: translate(-500%, -620%) rotate(0);
+  transform: translate(-500%, -620%) rotate(-45deg);
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, .3);
-  /*TRIGGER ANIMATION ON LOAD */
-  animation-timing-function: ease-out;
-  animation-name: squareOne;
-  animation-duration: 4s;
-  animation-delay: 0.5s;
-  animation-fill-mode: forwards;
 
-  /* animation-iteration-count: infinite; */
-  /* animation-direction: alternate; */
+  animation-timing-function: ease-in-out;
+
+animation: squareOne 3s calc( var(--delaySmSq)) forwards, postRotation1 2s calc(var(--delaySmSq) + 3.2s) infinite, postRotation1 2s calc(var(--delaySmSq) + 5.2s) alternate-reverse infinite ;
 
 }
 
 @keyframes squareOne {
   from {
     background: linear-gradient(50deg, rgba(255, 255, 28, 1) 10%, rgba(214, 58, 95, 1) 100%);
-    transform: translate(-500%, -500%) rotate(0);
+    transform: translate(-500%, -500%) rotate(-45);
 
     opacity: 0;
   }
 
-  40%{
+  35%{
     transform: translate(-50%, -120%) rotate(135deg);
     transform-origin: center;
-    opacity: 0.1;
+    opacity: 0.15;
   }
 
   50%{
     opacity: 0.8;
 
+
   }
   to {
     transform: translate(-50%, -120%) rotate(135deg);
     transform-origin: center;
+
     opacity: 1;
   }
 }
+
+@keyframes postRotation1 {
+  from {
+    transform: translate(-50%, -120%) rotate(135deg);
+    transform-origin: center;
+    border-radius: 0%;
+
+  }
+
+  35%{
+    transform: translate(-50%, -120%) rotate(135deg);
+    transform-origin: center;
+    border-radius: 0%;
+  }
+65%{
+  transform: translate(-100%, 0%) rotate(-45deg);
+  transform-origin: top right;
+  /* border-radius: 50%; */
+
+}
+
+  to{
+    transform: translate(-100%, 0%) rotate(-45deg);
+    transform-origin: top right;
+    /* border-radius: 50%; */
+
+      animation-fill-mode: forwards;
+      box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, 0);
+
+  }
+}
+
+
+
+
+
 
 #square-2 {
   background: linear-gradient(50deg, rgba(120, 48, 238, 1) 10%, rgba(214, 58, 95, 1) 100%);
@@ -153,10 +196,10 @@ main {
   transform: translate(500%, 500%) rotate(0);
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, .3);
   /*TRIGGER ANIMATION ON LOAD */
-  animation-name: squareTwo;
-  animation-duration: 3.5s;
-  animation-delay: 1s;
-  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+
+  animation: squareTwo 3s calc(0.5s + var(--delaySmSq)) forwards, postRotation2 2s calc(var(--delaySmSq) + 3.2s) infinite, postRotation2 2s calc(var(--delaySmSq) + 5.2s) alternate-reverse infinite ;
+
 
   /* animation-iteration-count: infinite; */
 }
@@ -173,7 +216,7 @@ main {
     40%{
       transform: translate(20%, -50%) rotate(225deg);
       transform-origin: center;
-      opacity: 0.1;
+      opacity: 0.15;
     }
 
     50%{
@@ -188,6 +231,37 @@ main {
     }
 }
 
+@keyframes postRotation2 {
+  from {
+    transform: translate(20%, -50%) rotate(225deg);
+    transform-origin: center;
+
+  }
+  35%{
+    transform: translate(20%, -50%) rotate(225deg);
+    transform-origin: center;
+    border-radius: 0%;
+
+  }
+75%{
+  transform: translate(-100%, 0%) rotate(45deg);
+  transform-origin: top right;
+  /* border-radius: 50%; */
+
+}
+
+  to{
+    transform: translate(-100%, 0%) rotate(45deg);
+    transform-origin: top right;
+      animation-fill-mode: forwards;
+      box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, 0);
+      /* border-radius: 50%; */
+
+
+  }
+}
+
+
 #square-3 {
   background: linear-gradient(50deg, rgba(78, 217, 70, 1) 10%, rgba(214, 58, 95, 1) 100%);
   position: absolute;
@@ -197,25 +271,69 @@ main {
   transform-origin: center;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, 20%) rotate(-45deg);
+  transform: translate(500%, 500%) rotate(-135deg);
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, .3);
   /*TRIGGER ANIMATION ON LOAD */
-  /* animation-name: squareThree;
-  animation-duration: 4s;
-  animation-delay: 0.52s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; */
+  animation-timing-function: ease-in-out;
+
+  animation: squareThree 3s calc(0.5s + var(--delaySmSq)) forwards, postRotation3 2s calc(var(--delaySmSq) + 3.2s) infinite, postRotation3 2s calc(var(--delaySmSq) + 5.2s) alternate-reverse infinite ;
 }
 
 @keyframes squareThree {
   from {
     background: linear-gradient(50deg, rgba(255, 255, 28, 1) 10%, rgba(214, 58, 95, 1) 100%);
-    transform: translate(-50%, -500%) rotate(0);
+    transform: translate(-500%, 500%) rotate(-135deg);
+
+    opacity: 0;
   }
 
+  40%{
+    transform: translate(-50%, 20%) rotate(-45deg);
+    transform-origin: center;
+    opacity: 0.15;
+  }
+
+  50%{
+    opacity: 0.8;
+
+  }
   to {
-    transform: translate(-50%, -50%) rotate(0deg);
-    opacity: 0;
+    transform: translate(-50%, 20%) rotate(-45deg);
+    transform-origin: center;
+    opacity: 1;
+
+  }
+}
+
+@keyframes postRotation3 {
+  from {
+    transform: translate(-50%, 20%) rotate(-45deg);
+    transform-origin: center;
+
+  }
+  35%{
+    transform: translate(-50%, 20%) rotate(-45deg);
+    transform-origin: center;
+    border-radius: 0%;
+
+  }
+75%{
+  transform: translate(-100%, 0%) rotate(-225deg);
+  transform-origin: top right;
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, 0);
+  /* border-radius: 50%; */
+
+
+}
+
+  to{
+    transform: translate(-100%, 0%) rotate(-225deg);
+    transform-origin: top right;
+      animation-fill-mode: forwards;
+      box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, 0);
+      /* border-radius: 50%; */
+
+
   }
 }
 
@@ -228,25 +346,74 @@ main {
   transform-origin: center;
   top: 50%;
   left: 50%;
-  transform: translate(-120%, -50%) rotate(45deg);
+  transform: translate(-500%, -500%) rotate(0deg);
   box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, .3);
+
+
+  animation-timing-function: ease-in-out;
   /*TRIGGER ANIMATION ON LOAD */
-  /* animation-name: squareFour;
-  animation-duration: 4s;
-  animation-delay: 0.52s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; */
-}
+  animation: squareFour 3s calc(1s + var(--delaySmSq)) forwards, postRotation4 2s calc(var(--delaySmSq) + 3.2s) infinite, postRotation4 2s calc(var(--delaySmSq) + 5.2s) alternate-reverse infinite ;}
 
 @keyframes squareFour {
-  from {
-    background: linear-gradient(50deg, rgba(255, 255, 28, 1) 10%, rgba(214, 58, 95, 1) 100%);
-    transform: translate(-50%, -500%) rotate(0);
-  }
 
-  to {
-    transform: translate(-50%, -50%) rotate(0deg);
-    opacity: 0;
+    from {
+      background: linear-gradient(50deg, rgba(255, 255, 28, 1) 10%, rgba(214, 58, 95, 1) 100%);
+      transform: translate(-500%, -500%) rotate(-90deg);
+
+      opacity: 0;
+    }
+
+    35%{
+      transform: translate(-100%, 0%) rotate(45deg);
+      transform-origin: top right;
+      opacity: 0.15;
+      border-radius: 0%;
+
+
+    }
+
+    50%{
+      opacity: 0.8;
+
+
+    }
+    to {
+      transform: translate(-120%, -50%) rotate(45deg);
+      transform-origin: center;
+
+      opacity: 1;
+    }
+}
+
+@keyframes postRotation4 {
+  from {
+    transform: translate(-120%, -50%) rotate(45deg);
+    transform-origin: center;
+
+  }
+  35%{
+    transform: translate(-120%, -50%) rotate(45deg);
+    transform-origin: center;
+    border-radius: 0%;
+
+  }
+75%{
+  transform: translate(-100%, 0%) rotate(-135deg);
+  transform-origin: top right;
+  box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, 0);
+  /* border-radius: 50%; */
+
+}
+
+
+  to{
+    transform: translate(-100%, 0%) rotate(-135deg);
+    transform-origin: top right;
+      animation-fill-mode: forwards;
+      box-shadow: 0px 5px 10px -3px rgba(0, 0, 28, 0);
+      /* border-radius: 50%; */
+
+
   }
 }
 
