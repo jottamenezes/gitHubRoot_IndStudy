@@ -6,7 +6,7 @@
   --theme-color: #241130;
   --mainPrinciple-color: linear-gradient(50deg, rgba(97, 180, 205, 1) -60%, rgba(38, 55, 138, 1) 30%, rgba(255, 255, 28, 1) 100%);
   --delaySmSq: 1.5s;
-  --squareSize: 8em;
+  --squareSize: 6em;
 }
 
 html, body {
