@@ -2,14 +2,43 @@
 
 
 var windowW;
+var Title = document.querySelector('a');
 
-window.addEventListener('resize', getWindowWidth);
 
-function getWindowWidth() {
-  windowW = window.innerWidth;
-  console.log('The Viewport is : ' + windowW);
+
+// ANIMATING DIV 1 ON HOVER
+div1.addEventListener('mouseover', hoverDiv);
+div1.addEventListener('mouseout', leavingDiv);
+  console.log('Targetting Div1');
+
+
+
+function hoverDiv() {
+
+  console.log('Targetting Div1');
+
+
+
 
 }
+
+function leavingDiv() {
+
+  console.log('Leaving Div1');
+
+
+
+
+}
+
+
+
+
+// CHECKING FOR SIZE OF WINDOW
+
+
+
+
 
 
 //
