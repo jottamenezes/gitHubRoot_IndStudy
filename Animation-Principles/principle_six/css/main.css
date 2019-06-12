@@ -16,7 +16,6 @@ body {
   overflow: hidden;
 }
 
-
 main {
   position: absolute;
   background-color: #48d9c7;
@@ -39,8 +38,6 @@ h1 {
   bottom: 28%;
 }
 
-
-
 h2 {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5em;
@@ -49,11 +46,8 @@ h2 {
   left: 3em;
   text-align: left;
   padding-top: 4.5em;
-
   color: #9cbff2;
-
 }
-
 
 .principlesBG {
   /* display: flex;
@@ -91,21 +85,18 @@ h2 {
   transform: translateX(-500%) translateY(-200%);
   border-radius: 0%;
   z-index: 1;
-
-
   /*TRIGGER ANIMATION ON LOAD */
   animation-name: linear;
   animation-delay: .5s;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-      animation-timing-function: linear;
-
+  animation-timing-function: linear;
   /* OR Follow schema */
   /* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name; */
 }
 
 #principle-2 {
-  background: linear-gradient(50deg,  rgba(134,1,123,1) -60%, rgba(255,192,203,1) 30%, rgba(255, 198, 28, 1) 100%);
+  background: linear-gradient(50deg, rgba(134, 1, 123, 1) -60%, rgba(255, 192, 203, 1) 30%, rgba(255, 198, 28, 1) 100%);
   position: absolute;
   width: 4em;
   height: 4em;
@@ -116,24 +107,16 @@ h2 {
   border-radius: 0%;
   z-index: 1;
 
-
-  /*TRIGGER ANIMATION ON LOAD */
   animation-name: easeInOut;
   animation-delay: .5s;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-      animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
 
-  /* OR Follow schema */
-  /* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name; */
 }
 
-
 #principle-3 {
-
-  background: linear-gradient(50deg,  rgba(239,50,217,1) -60%, rgba(137,255,253,1) 100%);
-
-
+  background: linear-gradient(50deg, rgba(239, 50, 217, 1) -60%, rgba(137, 255, 253, 1) 100%);
   position: absolute;
   width: 4em;
   height: 4em;
@@ -143,40 +126,29 @@ h2 {
   transform: translateX(-500%) translateY(200%);
   border-radius: 0%;
   z-index: 1;
-
-
-  /*TRIGGER ANIMATION ON LOAD */
   animation-name: custom;
   animation-delay: .5s;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-      animation-timing-function: cubic-bezier(.10,1.35,0.98,1.02);
-
-  /* OR Follow schema */
-  /* animation: duration | timing-function | delay | iteration-count | direction | fill-mode | play-state | name; */
+  animation-timing-function: cubic-bezier(.10, 1.35, 0.98, 1.02);
 }
-
-
-
-
 
 @keyframes linear {
   from {
-
     transform: translate(-500%, -200%);
-
   }
-15%{
-      transform: translate(-500%, -200%);
-}
 
-   55% {
-      transform: translate(500%, -200%) ;
-    }
+  15% {
+    transform: translate(-500%, -200%);
+  }
 
-    65% {
-            transform: translate(500%, -200%) ;
-    }
+  55% {
+    transform: translate(500%, -200%);
+  }
+
+  65% {
+    transform: translate(500%, -200%);
+  }
 
   to {
     transform: translate(-500%, -200%);
@@ -185,21 +157,20 @@ h2 {
 
 @keyframes easeInOut {
   from {
-
     transform: translate(-500%, 0%);
-
   }
-15%{
-      transform: translate(-500%, 0%);
-}
 
-   55% {
-      transform: translate(500%, 0%) ;
-    }
+  15% {
+    transform: translate(-500%, 0%);
+  }
 
-    65% {
-            transform: translate(500%, 0%) ;
-    }
+  55% {
+    transform: translate(500%, 0%);
+  }
+
+  65% {
+    transform: translate(500%, 0%);
+  }
 
   to {
     transform: translate(-500%, 0%);
@@ -208,27 +179,25 @@ h2 {
 
 @keyframes custom {
   from {
-
     transform: translate(-500%, 200%);
-
   }
-15%{
-      transform: translate(-500%, 200%);
-}
 
-   55% {
-      transform: translate(500%, 200%) ;
-    }
+  15% {
+    transform: translate(-500%, 200%);
+  }
 
-    65% {
-            transform: translate(500%, 200%) ;
-    }
+  55% {
+    transform: translate(500%, 200%);
+  }
+
+  65% {
+    transform: translate(500%, 200%);
+  }
 
   to {
     transform: translate(-500%, 200%);
   }
 }
-
 
 /* ACTION FOR SECONDARY ELEMENT */
 /* #secondary {
@@ -273,7 +242,6 @@ h2 {
     transform: translate(27.5em, 11.5em) rotate(90deg);
   }
 } */
-
 /* @keyframes linear {
   from {
     animation-timing-function: linear;
@@ -297,10 +265,6 @@ h2 {
     transform: translate(-500%, 0%);
   }
 } */
-
-
-
-
 #principle-1:hover {
   /* transform: translateX(-50%) translateY(-150%) scale(1.2) rotate(0deg);
   transition-property: background, transform, border-radius, box-shadow;

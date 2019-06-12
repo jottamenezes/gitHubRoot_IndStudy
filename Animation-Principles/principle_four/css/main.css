@@ -97,7 +97,6 @@ h1 {
   left: 50%;
   transform: translateX(-200%) translateY(-20%);
   border-radius: 0%;
-  /*TRIGGER ANIMATION ON LOAD */
   animation-name: poseToPose;
   animation-delay: .5s;
   animation-duration: 4.5s;
@@ -135,9 +134,6 @@ h1 {
     animation-timing-function: ease-out;
     transform: translate(-200%, -20%);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-
-
-
   }
 }
 

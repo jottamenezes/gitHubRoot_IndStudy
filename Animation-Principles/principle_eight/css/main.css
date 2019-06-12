@@ -98,8 +98,8 @@ h1 {
   left: 50%;
   transform: translateX(-200%) translateY(0%);
   border-radius: 0%;
-  /*TRIGGER ANIMATION ON LOAD */
-  animation-name: followThrough;
+
+  animation-name: secondaryAction;
   animation-delay: .5s;
   animation-duration: 3s;
   animation-iteration-count: infinite;
@@ -112,7 +112,7 @@ h1 {
 
 
 
-@keyframes followThrough {
+@keyframes secondaryAction {
   from {
     animation-timing-function: ease-out;
     transform: translate(-200%, 0%);
