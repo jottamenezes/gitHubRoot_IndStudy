@@ -83,6 +83,8 @@ div2.addEventListener('mouseover', overDiv2);
 
 function overDiv2() {
   console.log('over Div2');
+
+
   div2.style. backgroundColor = 'hsl(194, 36%, 5%)';
   anim2.style.animationPlayState = 'paused';
   anim2.style.opacity = "0.3";
@@ -98,8 +100,9 @@ function overDiv2() {
 div2.addEventListener('mouseout', leaveDiv2);
 function leaveDiv2() {
   console.log('leave Div2');
-  div2.style. backgroundColor = 'hsl(194, 36%, 10%)';
-
+  div2.style. backgroundColor = 'hsl(210, 34%, 9%)';
+  anim2.style.animationPlayState = "running";
+  anim2.style.opacity = "1";
 
 
   // TITLEOUT

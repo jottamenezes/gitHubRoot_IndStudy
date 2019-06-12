@@ -1,5 +1,4 @@
 @media only screen and (max-width: 600px) {
-
   body {
     background-color: #decb66;
     font-size: 1em;
@@ -7,26 +6,24 @@
     font-family: Montserrat, sans-serif;
   }
 
-
   main {
-
     background-color: #2e2047;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
     grid-column-gap: 2px;
-
     grid-row-gap: 2px;
   }
 }
+
 * {
   box-sizing: border-box;
-
-
-/* VARIABLES FOR THE PRINCIPLE ANIMATIONS */
-/* Principle 1 */
+  /* VARIABLES FOR THE PRINCIPLE ANIMATIONS */
+  /* Principle 1 */
   --squareSize: 5em;
-    --squashInY: -100%;
+  --squashInY: -100%;
+  --anticipY1: 0%;
+  --anticipY2: -100%;
 }
 
 body {
@@ -36,7 +33,6 @@ body {
   font-size: 1em;
   color: hsl(210, 25%, 24%);
   font-family: Montserrat, sans-serif;
-
   overflow: hidden;
 }
 
@@ -59,21 +55,17 @@ main {
   font-family: 'Amatic SC', cursive;
   transform: translateX(0%) translateY(200%);
   opacity: 0;
-
   transition: opacity .3s, transform .5s;
   transition-delay: .15s;
   transition-timing-function: ease-out;
 }
-
-
-
-
 
 #div1 {
   grid-area: 1 / 1 / 2 / 2;
   background-color: hsl(194, 36%, 9%);
   align-items: center;
   text-align: center;
+  overflow: hidden;
 }
 
 #principle-1 {
@@ -89,7 +81,6 @@ main {
   border-radius: 50%;
   box-shadow: 0px 13px 10px -2px rgba(0, 0, 28, .3);
   /*TRIGGER ANIMATION ON LOAD */
-
   animation-name: squashAndStretch;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -99,84 +90,99 @@ main {
 
 #div2 {
   grid-area: 1 / 2 / 2 / 3;
-    background-color: hsl(210, 34%, 9%);
+  background-color: hsl(210, 34%, 9%);
   align-items: center;
   text-align: center;
+  overflow: hidden;
+}
+
+#principle-2 {
+  background: linear-gradient(50deg, rgba(97, 180, 205, 1) -60%, rgba(38, 55, 138, 1) 30%, rgba(255, 255, 28, 1) 100%);
+  position: relative;
+  width: var(--squareSize);
+  height: var(--squareSize);
+  /* Centering div */
+  transform-origin: bottom;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(var(--anticipY1)) ;
+  border-radius: 0%;
+  animation-name: anticipation;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
 }
 
 #div3 {
   grid-area: 1 / 3 / 2 / 4;
-    background-color: hsl(228, 34%, 9%);
+  background-color: hsl(228, 34%, 9%);
   align-items: center;
   text-align: center;
 }
 
 #div4 {
   grid-area: 1 / 4 / 2 / 5;
-      background-color: hsl(247, 34%, 9%);
+  background-color: hsl(247, 34%, 9%);
   align-items: center;
   text-align: center;
 }
 
 #div5 {
   grid-area: 2 / 1 / 3 / 2;
-    background-color: hsl(260, 34%, 9%);
+  background-color: hsl(260, 34%, 9%);
   align-items: center;
   text-align: center;
 }
 
 #div6 {
   grid-area: 2 / 2 / 3 / 3;
-    background-color: hsl(280, 34%, 9%);
+  background-color: hsl(280, 34%, 9%);
   align-items: center;
   text-align: center;
 }
 
 #div7 {
   grid-area: 2 / 3 / 3 / 4;
-    background-color: hsl(300, 34%, 9%);
+  background-color: hsl(300, 34%, 9%);
   align-items: center;
   text-align: center;
 }
 
 #div8 {
   grid-area: 2 / 4 / 3 / 4;
-    background-color: hsl(320, 34%, 9%);
+  background-color: hsl(320, 34%, 9%);
   align-items: center;
   text-align: center;
 }
 
 #div9 {
   grid-area: 3 / 1 / 4 / 2;
-      background-color: hsl(340, 34%, 9%);
+  background-color: hsl(340, 34%, 9%);
   align-items: center;
   text-align: center;
 }
 
 #div10 {
   grid-area: 3 / 2 / 4 / 3;
-    background-color: hsl(20, 34%, 9%);
+  background-color: hsl(20, 34%, 9%);
   align-items: center;
   text-align: center;
 }
 
 #div11 {
   grid-area: 3 / 3 / 4 / 4;
-    background-color: hsl(45, 34%, 9%);
+  background-color: hsl(45, 34%, 9%);
   align-items: center;
   text-align: center;
 }
 
 #div12 {
   grid-area: 3 / 4 / 4 / 5;
-    background-color: hsl(80, 34%, 9%);
+  background-color: hsl(80, 34%, 9%);
   align-items: center;
   text-align: center;
 }
 
-#div1:hover {
-
-}
+#div1:hover {}
 
 @keyframes squashAndStretch {
   from {
@@ -217,7 +223,36 @@ main {
 
   to {
     animation-timing-function: ease-in-out;
-    transform: translateX(-50%) translateY(var(--squashInY))  scaleX(1) scaleY(1);
+    transform: translateX(-50%) translateY(var(--squashInY)) scaleX(1) scaleY(1);
     box-shadow: 0px 0px 70px -5px rgba(0, 45, 205, .7);
+  }
+}
+
+@keyframes anticipation {
+  from {
+    animation-timing-function: ease-out;
+    transform: translateX(-50%) translateY(var(--anticipY1)) scaleX(1) scaleY(1);
+  }
+
+  0%,
+  70% {
+    transform: translateX(-50%) translateY(var(--anticipY1)) scaleX(1) scaleY(1);
+  }
+
+  70%,
+  75% {
+    transform: translateX(-50%) translateY(var(--anticipY1)) scaleX(1) scaleY(.7);
+    box-shadow: 0px 0px 100px -2px rgba(0, 45, 205, .9);
+  }
+
+  75%, 90% {
+    transform: translateX(-50%) translateY(var(--anticipY2)) scaleX(1) scaleY(1);
+    box-shadow: 0px 0px 100px 10px rgba(0, 45, 205, .9);
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    animation-timing-function: ease-out;
+    transform: translateX(-50%) translateY(var(--anticipY2)) scaleX(1) scaleY(1);
   }
 }
